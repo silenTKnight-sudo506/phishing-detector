@@ -1,0 +1,158 @@
+:root {
+    --cyber-red: #ff003c;      
+    --bg-black: #050505;       
+    --text-white: #ffffff;
+    --text-grey: #a0a0a0;
+    --neon-green: #00ff41;
+    
+    /* Exact glass colors from your reference */
+    --glass-bg: rgba(255, 255, 255, 0.07); 
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-white);
+    font-family: 'Space Mono', monospace;
+    
+    /* REPLICATED BACKGROUND: Deep, blurry radial glow */
+    background: radial-gradient(circle at 50% 50%, #5e0b1a 0%, #1a0508 45%, #050505 100%);
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.modular-dashboard {
+    width: 95%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Spacing between the boxes */
+    padding: 40px 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* --- THE EXACT GLASS EFFECT --- */
+.card {
+    background: var(--glass-bg);
+    /* High blur + Saturation to pull colors from background */
+    backdrop-filter: blur(30px) saturate(200%); 
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    
+    /* Subtle white edge glow for depth */
+    border: 1px solid var(--glass-border); 
+    border-radius: 28px; /* Matching the rounded widget corners */
+    
+    /* Layered shadows for the floating look */
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05); 
+    
+    overflow: hidden;
+}
+
+/* Box 1: Title Styling */
+.title-card {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.badge {
+    background-color: var(--cyber-red);
+    color: white;
+    padding: 3px 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Box 2: Search Input Styling */
+.search-card {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.2); /* Darker glass tint */
+}
+
+.input-group {
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+input {
+    background: transparent;
+    border: none;
+    padding: 20px 25px;
+    color: white;
+    flex-grow: 1;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    outline: none;
+}
+
+button {
+    background-color: var(--cyber-red);
+    color: white;
+    border: none;
+    padding: 0 40px;
+    font-weight: bold;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover { background-color: #ff2b5b; transform: scale(1.02); }
+
+/* Box 3: Results with requested Text-to-Line Gap */
+.results-card {
+    padding: 40px 0;
+}
+
+.results-card.success { border-left: 10px solid var(--neon-green); }
+.results-card.warning { border-left: 10px solid var(--cyber-red); }
+
+/* Replicated Gap between the vertical line and text */
+.log-label, .verdict-header, .detection-details {
+    padding-left: 45px; 
+}
+
+.log-label {
+    font-size: 0.8rem;
+    color: var(--text-grey);
+    margin-bottom: 20px;
+    display: block;
+    letter-spacing: 2px;
+}
+
+.status-text {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.reason-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 0;
+}
+
+.reason-list li {
+    color: #ddd;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
