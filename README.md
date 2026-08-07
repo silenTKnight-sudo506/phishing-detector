@@ -1,54 +1,101 @@
-# 🛡️ Shield Scan: URL Phishing Detector
+# 🛡️ Shield Scan — URL Phishing Detector
 
-A specialized cybersecurity auditing tool designed to analyze suspicious URLs for phishing indicators using heuristic pattern matching.
-This project features a high-end Glassmorphism UI inspired by modern mobile widget aesthetics.
+> A lightweight cybersecurity auditing tool for detecting suspicious URLs using heuristic phishing analysis.
+
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-Web%20App-000000?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-UI-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 ---
 
-## 🚀 Project Overview
+## 🔎 Overview
 
-Shield Scan is a Flask-based web application developed to provide a real-time "Threat Score" by examining URL structure, suspicious keywords, and domain irregularities.
-It bridges the gap between deep technical auditing and clean, user-centric design.
+**Shield Scan** is a Flask-based web application that analyzes URLs for common phishing indicators.
+
+Instead of relying on a simple blacklist, the application examines the structure and characteristics of a submitted URL and produces a **threat-oriented assessment** based on heuristic rules.
+
+The interface combines a cybersecurity-focused visual design with a simple workflow:
+
+**Enter URL → Analyze → Review Result**
+
+---
+
+## 🖥️ Preview
+
+<p align="center">
+  <img src="Demo Image.png" alt="Shield Scan URL Phishing Detector" width="900">
+</p>
+
+<p align="center">
+  <i>Shield Scan — URL analysis interface</i>
+</p>
 
 ---
 
 ## ✨ Key Features
 
-* Neural Network Aesthetic: A terminal-inspired dashboard featuring a deep crimson and neon green visual feedback system.
-* Advanced Glassmorphism: Replicates high-end mobile OS widgets using a 30px backdrop-filter blur and 200% color saturation.
-* Heuristic Audit Engine: Analyzes input URLs for common phishing patterns including:
-    - IP-based URL detection
-    - Abnormal subdomain length
-    - Sensitive keyword filtering (e.g., "login", "verify", "bank")
-* Responsive Modular Layout: A clean three-box architecture designed for maximum readability of diagnostic logs.
+### 🛡️ Heuristic URL Analysis
+
+The application checks submitted URLs for suspicious characteristics such as:
+
+- IP-based URLs
+- Unusual or excessively long subdomains
+- Suspicious URL structures
+- Phishing-related keywords
+- Login and verification terminology
+- Banking-related terminology
+- Other configurable URL patterns
+
+### ⚡ Lightweight Architecture
+
+Designed as a small Flask application with a straightforward frontend, making it easy to run locally and modify.
+
+### 🎨 Cybersecurity-Focused UI
+
+The interface uses a dark, security-oriented visual style with:
+
+- Glassmorphism-inspired components
+- Responsive layout
+- High-contrast threat feedback
+- Minimal input workflow
+- Diagnostic-friendly presentation
+
+### 📱 Responsive Design
+
+The frontend is designed to remain usable across desktop and smaller screens.
 
 ---
 
-## 🛠️ Tech Stack
+## 🔬 How It Works
 
-- Backend: Python 3.x, Flask
-- Frontend: HTML5, CSS3 (Backdrop-Filters, Flexbox)
-- Design: Cyberpunk/Nothing OS Glassmorphism
-- OS Environment: Kali Linux
-
----
-
-## 📂 Installation & Setup
-
-Follow these steps to deploy the auditor on your local machine:
-
-1. Clone the repository:
-   git clone git@github.com:silentTKnight-sudo506/phishing-detector.git
-   cd phishing-detector
-
-2. Install dependencies:
-   pip install flask
-
-3. Launch the application:
-   python app.py
-
-4. Access the dashboard:
-   Open your browser and navigate to http://127.0.0.1:5000
-
-   📝 License
-Distributed under the MIT License. See LICENSE for more information.
+```text
+┌─────────────────┐
+│   Enter URL     │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Normalize Input │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Heuristic Checks│
+│                 │
+│ • IP Address    │
+│ • Subdomains    │
+│ • Keywords      │
+│ • URL Structure │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Threat Analysis │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Display Result  │
+└─────────────────┘
