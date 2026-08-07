@@ -290,10 +290,11 @@ You can also create controlled test cases locally to verify individual detection
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-The project is organized approximately as follows:
+The project is organized as follows:
 
+```text
 phishing-detector/
 ├── app.py
 ├── templates/
@@ -306,7 +307,7 @@ phishing-detector/
 ├── LICENSE
 └── README.md
 
----
+___
 
 # 🔧 Development
 
