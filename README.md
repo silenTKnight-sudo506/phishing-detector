@@ -294,14 +294,21 @@ You can also create controlled test cases locally to verify individual detection
 
 The project is organized approximately as follows:
 
-**phishing-detector/**  
-├── `app.py` — Flask application  
-├── `templates/` — HTML templates  
-├── `static/` — CSS, JavaScript, and frontend assets  
-├── `demo.png` — Application preview  
-├── `requirements.txt` — Python dependencies  
-├── `LICENSE` — MIT License  
-└── `README.md` — Project documentation
+phishing-detector/
+│
+├── app.py
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   ├── style.css
+│   └── ...
+│
+├── demo.png
+├── requirements.txt
+├── LICENSE
+└── README.md
 
 ---
 
@@ -383,22 +390,6 @@ Then open:
 
 **http://127.0.0.1:5001**
 
----
-
-## Preview Image Is Not Showing
-
-Make sure the preview image is located in the root directory of the repository and is named:
-
-`demo.png`
-
-The expected structure is:
-
-**phishing-detector/**  
-├── `demo.png`  
-├── `README.md`  
-└── other project files
-
-Using a simple filename without spaces helps avoid path and rendering issues.
 
 ---
 
