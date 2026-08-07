@@ -294,7 +294,7 @@ You can also create controlled test cases locally to verify individual detection
 
 The project is organized as follows:
 
-```markdown
+```text
 phishing-detector/
 ├── app.py
 ├── templates/
@@ -306,7 +306,7 @@ phishing-detector/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-
+text```
 ___
 
 # 🔧 Development
