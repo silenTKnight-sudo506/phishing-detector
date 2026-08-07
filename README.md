@@ -306,7 +306,7 @@ phishing-detector/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-text```
+
 ___
 
 # 🔧 Development
