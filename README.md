@@ -14,9 +14,9 @@
 
 **Shield Scan** is a Flask-based web application that analyzes URLs for common phishing indicators.
 
-Instead of relying on a simple blacklist, the application examines the structure and characteristics of a submitted URL and produces a **threat-oriented assessment** based on heuristic rules.
+Instead of relying only on a blacklist, the application examines the structure and characteristics of a submitted URL and produces a **threat-oriented assessment** using heuristic rules.
 
-The interface combines a cybersecurity-focused visual design with a simple workflow:
+The workflow is simple:
 
 **Enter URL → Analyze → Review Result**
 
@@ -50,12 +50,13 @@ The application checks submitted URLs for suspicious characteristics such as:
 
 ### ⚡ Lightweight Architecture
 
-Designed as a small Flask application with a straightforward frontend, making it easy to run locally and modify.
+A small Flask application with a straightforward frontend, making it easy to run locally and modify.
 
 ### 🎨 Cybersecurity-Focused UI
 
-The interface uses a dark, security-oriented visual style with:
+The interface provides:
 
+- Dark cybersecurity-inspired design
 - Glassmorphism-inspired components
 - Responsive layout
 - High-contrast threat feedback
@@ -64,7 +65,7 @@ The interface uses a dark, security-oriented visual style with:
 
 ### 📱 Responsive Design
 
-The frontend is designed to remain usable across desktop and smaller screens.
+The interface is designed to remain usable across desktop and smaller screens.
 
 ---
 
@@ -72,7 +73,7 @@ The frontend is designed to remain usable across desktop and smaller screens.
 
 ```text
 ┌─────────────────┐
-│   Enter URL     │
+│    Enter URL    │
 └────────┬────────┘
          │
          ▼
